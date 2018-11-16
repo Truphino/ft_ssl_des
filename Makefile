@@ -34,6 +34,7 @@ commands.c\
 flag_warpper.c\
 launcher.c\
 base64.c\
+base64_helpers.c\
 
 SRC_FILES = $(addprefix $(SRC_DIR)/,$(SRC_NAME_FILES))
 

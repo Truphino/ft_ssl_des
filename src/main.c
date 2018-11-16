@@ -15,11 +15,13 @@
 
 int			main(int argc, char **argv)
 {
-	t_flag_warpper	fw;
 	size_t			len = 0;
-	char			message[] = "OkOkOk";
+	char			message[] = "OkOTest123!@#";
 
-	fw.func_ptr = &(md5);
+	(void)argc;
+	(void)argv;
+	ft_putendl(message);
 	ft_putendl(base64_e(message, &len));
-	fw = parse_cli(argc, argv);
+	ft_putendl(base64_d(base64_e(message, &len), &len));
+//	fw = parse_cli(argc, argv);
 }

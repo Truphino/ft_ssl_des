@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   base64.h                                           :+:      :+:    :+:   */
+/*   base64_helpers.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trecomps <trecomps@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 10:54:23 by trecomps          #+#    #+#             */
-/*   Updated: 2018/11/14 10:54:31 by trecomps         ###   ########.fr       */
+/*   Created: 2018/11/16 16:17:00 by trecomps          #+#    #+#             */
+/*   Updated: 2018/11/16 16:17:01 by trecomps         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE64_H
-# define BASE64_H
+#ifndef BASE64_HELPERS_H
+# define BASE64_HELPERS_H
 
-#include <string.h>
-#include "base64_helpers.h"
+#include "libft.h"
+#include "stdio.h"
 
-char		*base64_e(char *message, size_t *output_len);
-char		*base64_d(char *message, size_t *output_len);
+uint32_t	get_24bits(char *message);
+uint32_t	get_4_char(char *encoded, size_t len);
+void		encode_bits(uint32_t message, char *encoded, size_t message_len);
+void		decode_bit(uint32_t bits_message, char *decoded, size_t e_len);
 
 #endif
